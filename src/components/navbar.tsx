@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import LanguageSwitcher from '@/app/components/language-switcher';
+import LanguageSwitcher from '@/components/language-switcher';
 
 interface NavbarProps {
   lang: 'pt' | 'en';

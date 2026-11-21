@@ -1,5 +1,5 @@
 import "./globals.css";
-import ScrollToTop from "@/app/components/scroll-to-top";
+import ScrollToTop from "@/components/scroll-to-top";
 
 interface RootLayoutProps {
   children: React.ReactNode;

@@ -1,10 +1,10 @@
 import { getDictionary } from '@/dictionaries/get-dictionary';
-import Navbar from '@/app/components/navbar';
-import AboutSection from '@/app/components/about-section';
-import ToolsSection from '../components/tools-sections';
-import ProjectsSection from '../components/projects-section';
-import ContactSection from '../components/contact-section';
-import HeroSection from '../components/hero-section';
+import Navbar from '@/components/navbar';
+import AboutSection from '@/components/about-section';
+import ToolsSection from '@/components/tools-sections';
+import ProjectsSection from '@/components/projects-section';
+import ContactSection from '@/components/contact-section';
+import HeroSection from '@/components/hero-section';
 
 interface PageProps {
   params: Promise<{ lang: 'pt' | 'en' }>;
