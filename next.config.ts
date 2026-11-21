@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 // Substitua pelo nome EXATO do seu repositório no GitHub
-const repoName = 'mauricio-portfolio'; 
+const repoName = 'portfolio'; 
 
 // Só aplica o prefixo se estiver no ambiente de produção do GitHub Actions
 const isProd = process.env.NODE_ENV === 'production';

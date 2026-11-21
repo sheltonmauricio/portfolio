@@ -28,7 +28,7 @@ const HeroSection = ({ dict, lang }: HeroSectionProps) => {
             </a>
 
             <a 
-            href={`${process.env.NODE_ENV === 'production' ? '/mauricio-portfolio' : ''}/cv.pdf`} 
+            href={`${process.env.NODE_ENV === 'production' ? '/portfolio' : ''}/cv.pdf`} 
             download="shelton_mauricio-cv.pdf"
             className="w-full sm:w-auto bg-secondary/10 hover:bg-secondary/50 text-text/80 font-semibold px-6 py-3 rounded-lg border border-primary hover:border-primary-hover transition-colors duration-200 text-center"
             >

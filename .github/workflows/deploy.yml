@@ -1,8 +1,11 @@
+
 name: Deploy Next.js to GitHub Pages
 
 on:
   push:
     branches: ["main"]
+
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -18,7 +21,9 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -26,8 +31,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-size: 20
-          cache: ${{ hashFiles('package-lock.json') && 'npm' || '' }}
+          node-version: 22
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
@@ -35,10 +40,22 @@ jobs:
       - name: Build with Next.js
         run: npm run build
 
+      - name: Verify static export
+        run: |
+          if [ ! -d "./out" ]; then
+            echo "Error: Next.js export directory ./out not found."
+            exit 1
+          fi
+
+          if [ ! -f "./out/index.html" ]; then
+            echo "Error: ./out/index.html not found."
+            exit 1
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out # Pasta gerada pelo output: 'export'
+          path: ./out
 
       - name: Deploy to GitHub Pages
         id: deployment
