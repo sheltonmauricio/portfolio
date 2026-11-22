@@ -43,6 +43,16 @@ jobs:
           npm ls lightningcss-linux-x64-gnu
           node -e "require('lightningcss')"
 
+      - name: Build with Next.js
+        env:
+          NODE_ENV: production
+        run: |
+          echo "NODE_ENV=$NODE_ENV"
+          npm run build
+          echo "Build completed. Checking output..."
+          ls -la
+          ls -la ./out || true
+
       - name: Verify static export
         run: |
           if [ ! -d "./out" ]; then
