@@ -1,5 +1,4 @@
 import "./globals.css";
-import ScrollToTop from "@/components/scroll-to-top";
 
 interface RootLayoutProps {
   children: React.ReactNode;
@@ -14,7 +13,6 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
     <html lang={currentLang}>
       <body className="font-sans antialiased">
         {children}
-        <ScrollToTop />
       </body>
     </html>
   );

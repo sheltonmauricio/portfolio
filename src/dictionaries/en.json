@@ -1,52 +1,288 @@
 {
   "meta": {
-    "title": "Mauricio's Portfolio",
-    "description": "A showcase of my projects and skills as an IT professional."
+    "title": "Shelton Maurício | Software Developer",
+    "description": "Portfolio of Shelton Maurício, software developer and fourth-year Computer Engineering student at UEM."
   },
   "nav": {
     "about": "About",
-    "tools": "Tools",
+    "expertise": "Expertise",
     "projects": "Projects",
-    "contact": "Contact"
+    "education": "Education",
+    "contact": "Contact",
+    "navigation_label": "Main navigation",
+    "language_label": "Language",
+    "language_pt": "Switch to Portuguese",
+    "language_en": "Switch to English",
+    "open_navigation": "Open navigation",
+    "close_navigation": "Close navigation"
   },
   "hero": {
-    "title": "Full-Stack Developer",
-    "subtitle": "I build robust systems integrating Next.js interfaces with Node.js APIs. Focused on clean architecture, data integrity, and performance.",
-    "cta": "View Projects",
-    "cv": "Download CV"
-  },
-  "about": {
-    "title": "About Me",
-    "p1": "Computer Engineering undergraduate at Eduardo Mondlane University (UEM) with a strong interest in Full-Stack Development, DevOps, and Network Infrastructure. I build web applications using modern technologies such as React, Next.js, Node.js, Express, TypeScript, and PostgreSQL, with a focus on clean architecture, maintainable code, and scalable solutions.",
-    "p2": "Alongside software development, I have experience working with Linux systems, Docker, networking fundamentals, and Cisco technologies, allowing me to bridge the gap between application development and infrastructure operations. One of my notable projects is BorraPassar!, a full-stack web application developed with Node.js, Express, Prisma, React, and Next.js, where I contributed to system architecture, backend development, frontend implementation, and API integration.",
-    "p3": "I am currently seeking internship and entry-level opportunities where I can further develop my skills in Software Engineering, DevOps, Cloud and Infrastructure, while contributing to the design and delivery of reliable, secure, and scalable technology solutions.",
-    "skills_title": "My Skills"
-  },
-  "tools": {
-    "title": "Tools",
-    "subtitle": "Technologies, frameworks, and software I use in my daily development ecosystem."
-  },
-  "projects": {
-    "title": "Recent Projects",
-    "subtitle": "A selection of high-impact applications combining fullstack development, database optimization, and software engineering.",
-    "view_code": "Code",
-    "items": [
+    "title": "Software Developer",
+    "student": "Computer Engineering student · fourth year · Universidade Eduardo Mondlane (UEM)",
+    "summary": "I build web and desktop applications, REST APIs, and work with relational databases. Systems, networks, and infrastructure are complementary technical interests.",
+    "project_cta": "View projects",
+    "contact_cta": "Get in touch",
+    "cv": "Download CV",
+    "focus_label": "Technical focus",
+    "focus": [
       {
-        "title": "MiniJobs",
-        "description": "Digital platform designed to connect service providers and clients for manual and technical tasks, focusing on usability and scalable architecture.",
-        "tags": ["TypeScript", "React-Native + Expo", "Node.js + Express + Prisma", "PostgreSQL"]
+        "label": "Applications",
+        "value": "Web and desktop"
       },
       {
-        "title": "BoraPassar",
-        "description": "Educational platform focused on the centralized sharing of exam materials and study resources, optimizing downloads and content discovery.",
-        "tags": ["TypeScript", "React + Next.js + Tailwind CSS", "Node.js + Express + Prisma", "PostgreSQL"]
+        "label": "Backend",
+        "value": "REST APIs and relational data"
+      },
+      {
+        "label": "Complementary interests",
+        "value": "Systems, networks, and infrastructure"
+      }
+    ]
+  },
+  "about": {
+    "eyebrow": "Engineering perspective",
+    "title": "About",
+    "p1": "I am a fourth-year Computer Engineering student at Universidade Eduardo Mondlane (UEM), with practical experience developing web and desktop applications, building REST APIs, working with databases, and configuring systems and networks.",
+    "p2": "Software development is my primary focus. I work with React, Next.js, TypeScript, and Node.js, alongside practical experience using Linux distributions, Windows Server, Cisco equipment, Docker, and Git. I am looking for an opportunity to apply these skills in software development and systems and network administration."
+  },
+  "expertise": {
+    "eyebrow": "Technical practice",
+    "title": "Technical Expertise",
+    "subtitle": "Technologies across application development, APIs, databases, communication, and systems.",
+    "categories": [
+      {
+        "id": "programming",
+        "name": "Programming",
+        "items": [
+          "JavaScript",
+          "TypeScript",
+          "Python",
+          "Java"
+        ]
+      },
+      {
+        "id": "frontend",
+        "name": "Frontend",
+        "items": [
+          "React",
+          "Next.js",
+          "HTML5",
+          "CSS3",
+          "Tailwind CSS"
+        ]
+      },
+      {
+        "id": "mobile",
+        "name": "Mobile",
+        "items": [
+          "React Native",
+          "Expo"
+        ]
+      },
+      {
+        "id": "backend",
+        "name": "Backend and APIs",
+        "items": [
+          "Node.js",
+          "Express",
+          "REST APIs",
+          "Prisma",
+          "Zod"
+        ]
+      },
+      {
+        "id": "databases",
+        "name": "Databases",
+        "items": [
+          "PostgreSQL",
+          "MySQL",
+          "SQLite",
+          "SQL",
+          "Relational data modelling"
+        ]
+      },
+      {
+        "id": "communication",
+        "name": "Communication and Integration",
+        "items": [
+          "TCP Sockets",
+          "WebSocket",
+          "CORBA"
+        ]
+      },
+      {
+        "id": "systems",
+        "name": "Systems and Networking",
+        "items": [
+          "Linux",
+          "Windows Server",
+          "Active Directory",
+          "Cisco networking",
+          "Bash"
+        ]
+      },
+      {
+        "id": "tools",
+        "name": "Tools",
+        "items": [
+          "Docker",
+          "Git",
+          "GitHub",
+          "Maven",
+          "Postman",
+          "Insomnia"
+        ]
+      }
+    ]
+  },
+  "projects": {
+    "title": "Selected Projects",
+    "subtitle": "Work across educational platforms, real-time communication, distributed systems, and interface development.",
+    "technologies_label": "Technologies",
+    "items": [
+      {
+        "id": "borapassar",
+        "title": "BoraPassar!",
+        "category": "Full-stack educational platform",
+        "description": "An educational platform for exams and public notices, spanning frontend and backend development. Includes REST APIs, role-based authentication, validation, document and image management, search, sorting, pagination, and relational data access through Prisma.",
+        "technologies": [
+          "Next.js",
+          "React",
+          "Zustand",
+          "Node.js",
+          "Express",
+          "TypeScript",
+          "Prisma ORM",
+          "Zod"
+        ],
+        "live_demo_url": null,
+        "repository_url": null,
+        "achievement": null
+      },
+      {
+        "id": "lava-ja",
+        "title": "Lava Já",
+        "category": "Hackathon team project",
+        "context": "Moza xLab × UEM · October 2026 · 3rd place",
+        "description": "Led the team and coordinated activities and decisions. Contributed to defining and implementing platform features and to technical and business decisions.",
+        "technologies": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "NestJS",
+          "Prisma ORM",
+          "PostgreSQL"
+        ],
+        "live_demo_url": null,
+        "repository_url": null,
+        "achievement": "3rd Place — Moza xLab × UEM Hackathon"
+      },
+      {
+        "id": "sockethub",
+        "title": "SocketHub",
+        "category": "Real-time chat",
+        "description": "A real-time chat system with client-server communication over TCP Sockets and a defined message format. It includes a WebSocket gateway, JSON validation, SQLite persistence, failure detection, and reconnection.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "React",
+          "Electron",
+          "TCP Sockets",
+          "WebSocket",
+          "SQLite",
+          "Zod"
+        ],
+        "live_demo_url": null,
+        "repository_url": null,
+        "achievement": null
+      },
+      {
+        "id": "medisync",
+        "title": "MediSync",
+        "category": "Hospital service management",
+        "description": "A Java and Python client-server application using CORBA to manage patients, appointments, and service queues, with data persisted in SQLite.",
+        "technologies": [
+          "Java",
+          "JacORB",
+          "SQLite",
+          "Maven",
+          "Docker",
+          "Python",
+          "PySide6",
+          "OmniORB"
+        ],
+        "live_demo_url": null,
+        "repository_url": null,
+        "achievement": null
+      },
+      {
+        "id": "eduacademy",
+        "title": "EduAcademy",
+        "category": "Institutional landing page",
+        "description": "A responsive web interface presenting educational programmes, built with reusable components and layouts adapted to different devices.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS"
+        ],
+        "live_demo_url": null,
+        "repository_url": null,
+        "achievement": null
+      }
+    ],
+    "carousel_label": "Selected projects",
+    "previous": "Previous projects",
+    "next": "Next projects",
+    "live_demo": "Live Demo",
+    "repository": "Repository"
+  },
+  "education": {
+    "eyebrow": "Education and credentials",
+    "title": "Education & Certifications",
+    "subtitle": "Academic study, professional training, certifications, and languages.",
+    "education_label": "Education",
+    "degree": "Bachelor's degree in Computer Engineering",
+    "institution": "Universidade Eduardo Mondlane (UEM)",
+    "period": "2022–present · 4th year",
+    "training_label": "Training",
+    "training_title": "Full-Stack Developer",
+    "training_provider": "B7Web",
+    "training_description": "Training in web and mobile development, React, Node.js, TypeScript, REST APIs, databases, and Docker.",
+    "certifications_label": "Certifications",
+    "certification_group": "X-Road · 2024",
+    "certifications": [
+      "X-Road Fundamentals",
+      "X-Road Central Server Administrator",
+      "X-Road Service Developer"
+    ],
+    "languages_label": "Languages",
+    "languages": [
+      {
+        "name": "Portuguese",
+        "level": "Fluent"
+      },
+      {
+        "name": "English",
+        "level": "Intermediate"
       }
     ]
   },
   "contact": {
-    "title": "Get in Touch",
-    "subtitle": "I am always open to new opportunities, collaborations, or technical discussions. Choose the best platform to reach out.",
-    "cta_email": "Send Email",
+    "eyebrow": "Contact",
+    "title": "Get in touch",
+    "subtitle": "For questions about my work or technical conversations, contact me by email or connect on LinkedIn.",
+    "cta_email": "Send an email",
     "cta_linkedin": "Connect on LinkedIn"
+  },
+  "footer": {
+    "copyright": "© {year} Shelton Maurício",
+    "name": "Shelton Maurício",
+    "role": "Software Developer",
+    "location": "Maputo, Mozambique",
+    "navigation_label": "Navigation",
+    "linkedin": "LinkedIn",
+    "email": "Email",
+    "back_to_top": "Back to top"
   }
 }

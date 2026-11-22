@@ -2,7 +2,15 @@
 
 import { usePathname, useRouter } from 'next/navigation';
 
-const LanguageSwitcher = () => {
+interface LanguageSwitcherProps {
+  labels: {
+    group: string;
+    portuguese: string;
+    english: string;
+  };
+}
+
+const LanguageSwitcher = ({ labels }: LanguageSwitcherProps) => {
   const pathname = usePathname();
   const router = useRouter();
 
@@ -32,26 +40,27 @@ const LanguageSwitcher = () => {
   };
 
   return (
-    <div className="flex items-center gap-1 p-0.5 bg-secondary rounded-xl border border-accent/10 w-max font-mono text-sm">
+    <div
+      role="group"
+      aria-label={labels.group}
+      className="language-switcher w-max font-mono"
+    >
       <button
         onClick={() => switchLanguage('pt')}
-        className={`px-3 py-0.5 rounded-lg transition-all duration-200 ${
-          currentLang === 'pt'
-            ? 'bg-primary text-background'
-            : 'text-text hover:text-primary-hover'
-        }`}
+        aria-pressed={currentLang === 'pt'}
+        aria-label={labels.portuguese}
+        className="rounded-full px-2"
       >
-        pt
+        PT
       </button>
+      <span aria-hidden="true" className="text-caption text-text-tertiary">|</span>
       <button
         onClick={() => switchLanguage('en')}
-        className={`px-3 py-0.5 rounded-lg transition-all duration-200 ${
-          currentLang === 'en'
-            ? 'bg-primary text-background'
-            : 'text-text hover:text-primary-hover'
-        }`}
+        aria-pressed={currentLang === 'en'}
+        aria-label={labels.english}
+        className="rounded-full px-2"
       >
-        en
+        EN
       </button>
     </div>
   );

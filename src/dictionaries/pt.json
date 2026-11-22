@@ -1,52 +1,288 @@
 {
   "meta": {
-    "title": "Maurício's Portfolio",
-    "description": "Uma apresentação dos meus projetos e competências enquanto profissional de informática."
+    "title": "Shelton Maurício | Desenvolvedor de Software",
+    "description": "Portefólio de Shelton Maurício, desenvolvedor de software e estudante do quarto ano de Engenharia Informática na UEM."
   },
   "nav": {
     "about": "Sobre",
-    "tools": "Ferramentas",
+    "expertise": "Competências",
     "projects": "Projectos",
-    "contact": "Contacto"
+    "education": "Formação",
+    "contact": "Contacto",
+    "navigation_label": "Navegação principal",
+    "language_label": "Idioma",
+    "language_pt": "Mudar para português",
+    "language_en": "Mudar para inglês",
+    "open_navigation": "Abrir navegação",
+    "close_navigation": "Fechar navegação"
   },
   "hero": {
-    "title": "Desenvolvedor Full-Stack",
-    "subtitle": "Desenvolvo sistemas robustos integrando interfaces em Next.js a APIs em Node.js. Foco em arquitetura limpa, integridade de dados e performance.",
-    "cta": "Ver Projectos",
-    "cv": "Baixar CV"
-  },
-  "about": {
-    "title": "Sobre Mim",
-    "p1": "Graduando em Engenharia Informática pela Universidade Eduardo Mondlane (UEM), com foco em desenvolvimento Full-Stack e infraestrutura de redes. Tenho experiência no desenvolvimento de aplicações web utilizando React, Next.js, Node.js, Express, TypeScript e PostgreSQL, aplicando boas práticas de arquitectura, validação de dados e desenvolvimento orientado à escalabilidade.",
-    "p2": "Possuo também conhecimentos em administração de sistemas Linux, virtualização, Docker, configuração de redes e tecnologias Cisco, combinando competências de engenharia de software com fundamentos de infraestrutura e operações. Entre os projectos desenvolvidos destaca-se o BorraPassar!, uma aplicação web construída com Node.js, Express, Prisma, React e Next.js, onde participei no desenho da arquitectura, implementação de funcionalidades e integração entre frontend e backend.",
-    "p3": "Procuro oportunidades de estágio e início de carreira que me permitam aprofundar competências em engenharia de software, DevOps, infraestrutura e redes, contribuindo para a construção de soluções tecnológicas robustas, seguras e escaláveis.",
-    "skills_title": "Minhas Competências"
-  },
-  "tools": {
-    "title": "Ferramentas",
-    "subtitle": "Tecnologias, frameworks e softwares que utilizo no meu ecossistema de desenvolvimento diário."
-  },
-  "projects": {
-    "title": "Projetos Recentes",
-    "subtitle": "Uma seleção de aplicações de impacto, combinando desenvolvimento fullstack, otimização de banco de dados e engenharia de software.",
-    "view_code": "Código",
-    "items": [
+    "title": "Desenvolvedor de Software",
+    "student": "Estudante do 4.º ano de Engenharia Informática na Universidade Eduardo Mondlane (UEM)",
+    "summary": "Desenvolvo aplicações web e desktop, APIs REST e trabalho com bases de dados relacionais. Sistemas, redes e infraestrutura são interesses técnicos complementares.",
+    "project_cta": "Ver projectos",
+    "contact_cta": "Entrar em contacto",
+    "cv": "Descarregar CV",
+    "focus_label": "Áreas técnicas",
+    "focus": [
       {
-        "title": "MiniJobs",
-        "description": "Plataforma digital desenhada para conectar prestadores de serviços e clientes para tarefas manuais e técnicas, com foco em usabilidade e arquitetura escalável.",
-        "tags": ["TypeScript", "React-Native + Expo", "Node.js + Express + Prisma", "PostgreSQL"]
+        "label": "Aplicações",
+        "value": "Web e desktop"
       },
       {
-        "title": "BoraPassar",
-        "description": "Plataforma educacional focada no compartilhamento centralizado de materiais de exames e recursos de estudo, otimizando downloads e busca de conteúdos.",
-        "tags": ["TypeScript", "React + Next.js + Tailwind CSS", "Node.js + Express + Prisma", "PostgreSQL"]
+        "label": "Backend",
+        "value": "APIs REST e dados relacionais"
+      },
+      {
+        "label": "Interesses complementares",
+        "value": "Sistemas, redes e infraestrutura"
       }
     ]
   },
+  "about": {
+    "eyebrow": "Perspectiva de Engenharia",
+    "title": "Sobre",
+    "p1": "Sou estudante do 4.º ano de Engenharia Informática na Universidade Eduardo Mondlane (UEM), com experiência prática no desenvolvimento de aplicações Web e Desktop, criação de APIs REST, gestão de bases de dados e configuração de sistemas e redes.",
+    "p2": "O desenvolvimento de software é a minha área principal. Utilizo React, Next.js, TypeScript e Node.js, e tenho experiência prática com distribuições Linux, Windows Server, equipamentos Cisco, Docker e Git. Procuro uma oportunidade para aplicar estes conhecimentos no desenvolvimento de software e na administração de sistemas e redes."
+  },
+  "projects": {
+    "title": "Projectos Seleccionados",
+    "subtitle": "Projectos nas áreas de plataformas educacionais, comunicação em tempo real, sistemas distribuídos e desenvolvimento de interfaces.",
+    "technologies_label": "Tecnologias",
+    "items": [
+      {
+        "id": "borapassar",
+        "title": "BoraPassar!",
+        "category": "Plataforma educacional full-stack",
+        "description": "Plataforma educacional para exames e editais, com desenvolvimento de frontend e backend. Inclui APIs REST, autenticação e controlo de acesso por perfis, validação, gestão de documentos e imagens, pesquisa, ordenação, paginação e acesso a dados relacionais através do Prisma.",
+        "technologies": [
+          "Next.js",
+          "React",
+          "Zustand",
+          "Node.js",
+          "Express",
+          "TypeScript",
+          "Prisma ORM",
+          "Zod"
+        ],
+        "live_demo_url": null,
+        "repository_url": null,
+        "achievement": null
+      },
+      {
+        "id": "lava-ja",
+        "title": "Lava Já",
+        "category": "Projecto de equipa em hackathon",
+        "context": "Hackathon Moza xLab × UEM · Outubro de 2026 · 3.º lugar",
+        "description": "Liderou a equipa e coordenou actividades e decisões. Participou na definição e implementação de funcionalidades e nas decisões técnicas e de negócio da plataforma.",
+        "technologies": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "NestJS",
+          "Prisma ORM",
+          "PostgreSQL"
+        ],
+        "live_demo_url": null,
+        "repository_url": null,
+        "achievement": "3.º Lugar — Hackathon Moza xLab × UEM"
+      },
+      {
+        "id": "sockethub",
+        "title": "SocketHub",
+        "category": "Chat em tempo real",
+        "description": "Sistema de chat com comunicação cliente-servidor através de TCP Sockets e formato de mensagens definido. Inclui um gateway WebSocket, validação de JSON, persistência em SQLite, detecção de falhas e reconexão.",
+        "technologies": [
+          "Node.js",
+          "TypeScript",
+          "React",
+          "Electron",
+          "TCP Sockets",
+          "WebSocket",
+          "SQLite",
+          "Zod"
+        ],
+        "live_demo_url": null,
+        "repository_url": null,
+        "achievement": null
+      },
+      {
+        "id": "medisync",
+        "title": "MediSync",
+        "category": "Gestão de atendimento hospitalar",
+        "description": "Aplicação cliente-servidor em Java e Python que utiliza CORBA para gerir pacientes, agendamentos e filas de atendimento, com persistência de dados em SQLite.",
+        "technologies": [
+          "Java",
+          "JacORB",
+          "SQLite",
+          "Maven",
+          "Docker",
+          "Python",
+          "PySide6",
+          "OmniORB"
+        ],
+        "live_demo_url": null,
+        "repository_url": null,
+        "achievement": null
+      },
+      {
+        "id": "eduacademy",
+        "title": "EduAcademy",
+        "category": "Landing page institucional",
+        "description": "Interface Web responsiva para apresentação de programas educacionais, desenvolvida com componentes reutilizáveis e layouts adaptados a diferentes dispositivos.",
+        "technologies": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Tailwind CSS"
+        ],
+        "live_demo_url": null,
+        "repository_url": null,
+        "achievement": null
+      }
+    ],
+    "carousel_label": "Projectos seleccionados",
+    "previous": "Projectos anteriores",
+    "next": "Projectos seguintes",
+    "live_demo": "Demo ao vivo",
+    "repository": "Repositório"
+  },
   "contact": {
-    "title": "Entre em Contato",
-    "subtitle": "Estou sempre aberto a novas oportunidades, colaborações ou discussões técnicas. Escolha a melhor plataforma para falar comigo.",
-    "cta_email": "Enviar E-mail",
+    "eyebrow": "Contacto",
+    "title": "Entre em contacto",
+    "subtitle": "Para questões sobre o meu trabalho ou conversas técnicas, pode contactar-me por e-mail ou pelo LinkedIn.",
+    "cta_email": "Enviar e-mail",
     "cta_linkedin": "Conectar no LinkedIn"
+  },
+  "expertise": {
+    "eyebrow": "Prática técnica",
+    "title": "Competências Técnicas",
+    "subtitle": "Tecnologias relacionadas com desenvolvimento de aplicações, APIs, bases de dados, comunicação e sistemas.",
+    "categories": [
+      {
+        "id": "programming",
+        "name": "Programação",
+        "items": [
+          "JavaScript",
+          "TypeScript",
+          "Python",
+          "Java"
+        ]
+      },
+      {
+        "id": "frontend",
+        "name": "Frontend",
+        "items": [
+          "React",
+          "Next.js",
+          "HTML5",
+          "CSS3",
+          "Tailwind CSS"
+        ]
+      },
+      {
+        "id": "mobile",
+        "name": "Mobile",
+        "items": [
+          "React Native",
+          "Expo"
+        ]
+      },
+      {
+        "id": "backend",
+        "name": "Backend e APIs",
+        "items": [
+          "Node.js",
+          "Express",
+          "APIs REST",
+          "Prisma",
+          "Zod"
+        ]
+      },
+      {
+        "id": "databases",
+        "name": "Bases de dados",
+        "items": [
+          "PostgreSQL",
+          "MySQL",
+          "SQLite",
+          "SQL",
+          "Modelação de dados relacionais"
+        ]
+      },
+      {
+        "id": "communication",
+        "name": "Comunicação e integração",
+        "items": [
+          "TCP Sockets",
+          "WebSocket",
+          "CORBA"
+        ]
+      },
+      {
+        "id": "systems",
+        "name": "Sistemas e redes",
+        "items": [
+          "Linux",
+          "Windows Server",
+          "Active Directory",
+          "Redes Cisco",
+          "Bash"
+        ]
+      },
+      {
+        "id": "tools",
+        "name": "Ferramentas",
+        "items": [
+          "Docker",
+          "Git",
+          "GitHub",
+          "Maven",
+          "Postman",
+          "Insomnia"
+        ]
+      }
+    ]
+  },
+  "education": {
+    "eyebrow": "Formação e credenciais",
+    "title": "Formação e Certificações",
+    "subtitle": "Formação académica, profissional, certificações e idiomas.",
+    "education_label": "Formação académica",
+    "degree": "Licenciatura em Engenharia Informática",
+    "institution": "Universidade Eduardo Mondlane (UEM)",
+    "period": "2022–presente · 4.º ano",
+    "training_label": "Formação",
+    "training_title": "Full-Stack Developer",
+    "training_provider": "B7Web",
+    "training_description": "Formação em desenvolvimento Web e Mobile, React, Node.js, TypeScript, APIs REST, bases de dados e Docker.",
+    "certifications_label": "Certificações",
+    "certification_group": "X-Road · 2024",
+    "certifications": [
+      "X-Road Fundamentals",
+      "X-Road Central Server Administrator",
+      "X-Road Service Developer"
+    ],
+    "languages_label": "Idiomas",
+    "languages": [
+      {
+        "name": "Português",
+        "level": "Fluente"
+      },
+      {
+        "name": "Inglês",
+        "level": "Intermédio"
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "© {year} Shelton Maurício",
+    "name": "Shelton Maurício",
+    "role": "Desenvolvedor de Software",
+    "location": "Maputo, Moçambique",
+    "navigation_label": "Navegação",
+    "linkedin": "LinkedIn",
+    "email": "E-mail",
+    "back_to_top": "Voltar ao topo"
   }
 }

@@ -1,28 +1,35 @@
 interface AboutSectionProps {
   dict: {
+    eyebrow: string;
     title: string;
     p1: string;
     p2: string;
-    p3: string;
   };
 }
 
 export default function AboutSection({ dict }: AboutSectionProps) {
   return (
-    <section id="about" className="w-full py-20 border-b border-secondary/30 scroll-mt-16">
-      <div className="max-w-6xl mx-auto px-6 space-y-6">
-        <h2 className="text-3xl font-bold font-sans text-text tracking-tight flex items-center gap-3">
-          <span className="text-primary font-mono text-2xl">01.</span> {dict.title}
-        </h2>
-        <p className="text-accent leading-relaxed font-sans text-lg">
-          {dict.p1}
-        </p>
-        <p className="text-accent leading-relaxed font-sans text-lg">
-          {dict.p2}
-        </p>
-        <p className="text-accent leading-relaxed font-sans text-lg">
-          {dict.p3}
-        </p>
+    <section
+      id="about"
+      aria-labelledby="about-heading"
+      className="section-shell border-b border-border-subtle"
+    >
+      <div className="content-wrapper grid grid-cols-1 gap-5 md:grid-cols-12 md:gap-8">
+        <header className="md:col-span-3">
+          <p className="section-eyebrow">{dict.eyebrow}</p>
+          <h2 id="about-heading" className="section-heading mt-2">
+            {dict.title}
+          </h2>
+        </header>
+
+        <div className="space-y-3 md:col-span-8 md:col-start-5">
+          <p className="max-w-3xl font-sans text-body-lg leading-relaxed text-text-primary">
+            {dict.p1}
+          </p>
+          <p className="max-w-3xl font-sans text-body leading-relaxed text-text-secondary">
+            {dict.p2}
+          </p>
+        </div>
       </div>
     </section>
   );
