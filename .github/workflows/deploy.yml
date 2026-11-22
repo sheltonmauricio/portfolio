@@ -37,8 +37,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build with Next.js
-        run: npm run build
+      - name: Verify Lightning CSS installation
+        run: |
+          npm ls lightningcss
+          npm ls lightningcss-linux-x64-gnu || true
+
+          node -e "require('lightningcss')"
+
+            - name: Build with Next.js
+              run: npm run build
 
       - name: Verify static export
         run: |
