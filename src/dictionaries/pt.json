@@ -27,11 +27,11 @@
     "focus": [
       {
         "label": "Aplicações",
-        "value": "Web e desktop"
+        "value": "Web, Desktop e Mobile"
       },
       {
         "label": "Backend",
-        "value": "APIs REST e dados relacionais"
+        "value": "APIs REST e Base de Dados Relacionais"
       },
       {
         "label": "Interesses complementares",
@@ -67,7 +67,8 @@
         ],
         "live_demo_url": null,
         "repository_url": null,
-        "achievement": null
+        "achievement": null,
+        "repository_links": []
       },
       {
         "id": "lava-ja",
@@ -85,7 +86,8 @@
         ],
         "live_demo_url": null,
         "repository_url": null,
-        "achievement": "3.º Lugar — Hackathon Moza xLab × UEM"
+        "achievement": "3.º Lugar — Hackathon Moza xLab × UEM",
+        "repository_links": []
       },
       {
         "id": "sockethub",
@@ -104,7 +106,21 @@
         ],
         "live_demo_url": null,
         "repository_url": null,
-        "achievement": null
+        "achievement": null,
+        "repository_links": [
+          {
+            "id": "backend",
+            "url": "https://github.com/sheltonmauricio/sockethub-backend"
+          },
+          {
+            "id": "web_client",
+            "url": "https://github.com/sheltonmauricio/sockethub-frontend-web"
+          },
+          {
+            "id": "desktop_client",
+            "url": "https://github.com/sheltonmauricio/sockethub-frontend"
+          }
+        ]
       },
       {
         "id": "medisync",
@@ -123,7 +139,17 @@
         ],
         "live_demo_url": null,
         "repository_url": null,
-        "achievement": null
+        "achievement": null,
+        "repository_links": [
+          {
+            "id": "server",
+            "url": "https://github.com/sheltonmauricio/medisync-corba-server"
+          },
+          {
+            "id": "client",
+            "url": "https://github.com/sheltonmauricio/medisync-corba-client"
+          }
+        ]
       },
       {
         "id": "eduacademy",
@@ -136,23 +162,33 @@
           "TypeScript",
           "Tailwind CSS"
         ],
-        "live_demo_url": null,
+        "live_demo_url": "https://eduacademymz.github.io/page",
         "repository_url": null,
-        "achievement": null
+        "achievement": null,
+        "repository_links": []
       }
     ],
     "carousel_label": "Projectos seleccionados",
     "previous": "Projectos anteriores",
     "next": "Projectos seguintes",
     "live_demo": "Demo ao vivo",
-    "repository": "Repositório"
+    "repository": "Repositório",
+    "repository_action": "Repositórios",
+    "repository_labels": {
+      "backend": "Backend",
+      "web_client": "Cliente Web",
+      "desktop_client": "Cliente Desktop",
+      "server": "Servidor",
+      "client": "Cliente"
+    }
   },
   "contact": {
     "eyebrow": "Contacto",
     "title": "Entre em contacto",
-    "subtitle": "Para questões sobre o meu trabalho ou conversas técnicas, pode contactar-me por e-mail ou pelo LinkedIn.",
+    "subtitle": "Para questões sobre o meu trabalho ou conversas técnicas, pode contactar-me por e-mail, LinkedIn ou WhatsApp.",
     "cta_email": "Enviar e-mail",
-    "cta_linkedin": "Conectar no LinkedIn"
+    "cta_linkedin": "Conectar no LinkedIn",
+    "whatsapp": "WhatsApp"
   },
   "expertise": {
     "eyebrow": "Prática técnica",
@@ -283,6 +319,7 @@
     "navigation_label": "Navegação",
     "linkedin": "LinkedIn",
     "email": "E-mail",
-    "back_to_top": "Voltar ao topo"
+    "back_to_top": "Voltar ao topo",
+    "whatsapp": "WhatsApp"
   }
 }

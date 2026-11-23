@@ -1,5 +1,6 @@
 import ScrollToTop from '@/components/scroll-to-top';
-import { LinkedInIcon, MailIcon, MapPinIcon } from '@/components/icons';
+import { LinkedInIcon, MailIcon, MapPinIcon, WhatsAppIcon } from '@/components/icons';
+import { CONTACT_LINKS } from '@/lib/contact-links';
 
 interface FooterDictionary {
   name: string;
@@ -8,6 +9,7 @@ interface FooterDictionary {
   navigation_label: string;
   linkedin: string;
   email: string;
+  whatsapp: string;
   back_to_top: string;
   copyright: string;
 }
@@ -72,7 +74,7 @@ const SiteFooter = ({ dict, nav }: SiteFooterProps) => {
           <ul className="flex flex-wrap gap-x-4 gap-y-2 md:col-span-3 md:col-start-10">
             <li>
               <a
-                href="https://www.linkedin.com/in/sheltonmauricio"
+                href={CONTACT_LINKS.linkedin.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 text-caption text-text-secondary transition-colors hover:text-text-primary"
@@ -83,11 +85,26 @@ const SiteFooter = ({ dict, nav }: SiteFooterProps) => {
             </li>
             <li>
               <a
-                href="mailto:shelton.mauricio.m@gmail.com"
+                href={CONTACT_LINKS.email.href}
                 className="inline-flex items-center gap-1.5 text-caption text-text-secondary transition-colors hover:text-text-primary"
               >
                 <MailIcon className="size-3.5" />
                 {dict.email}
+              </a>
+            </li>
+            <li>
+              <a
+                href={CONTACT_LINKS.whatsapp.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-caption text-text-secondary transition-colors hover:text-text-primary"
+                aria-label={`${dict.whatsapp}: ${CONTACT_LINKS.whatsapp.number}`}
+              >
+                <WhatsAppIcon className="size-3.5" />
+                <span>{dict.whatsapp}</span>
+                <span className="font-mono text-text-tertiary">
+                  {CONTACT_LINKS.whatsapp.number}
+                </span>
               </a>
             </li>
           </ul>

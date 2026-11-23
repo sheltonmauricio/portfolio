@@ -1,4 +1,5 @@
-import { LinkedInIcon, MailIcon } from '@/components/icons';
+import { LinkedInIcon, MailIcon, WhatsAppIcon } from '@/components/icons';
+import { CONTACT_LINKS } from '@/lib/contact-links';
 
 interface ContactSectionProps {
   dict: {
@@ -7,13 +8,11 @@ interface ContactSectionProps {
     subtitle: string;
     cta_email: string;
     cta_linkedin: string;
+    whatsapp: string;
   };
 }
 
 const ContactSection = ({ dict }: ContactSectionProps) => {
-  const email = 'shelton.mauricio.m@gmail.com';
-  const linkedinUrl = 'https://www.linkedin.com/in/sheltonmauricio';
-
   return (
     <section
       id="contact"
@@ -34,20 +33,33 @@ const ContactSection = ({ dict }: ContactSectionProps) => {
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             <a
-              href={`mailto:${email}`}
+              href={CONTACT_LINKS.email.href}
               className="ui-button ui-button-primary rounded-full gap-2 px-4 py-2 text-small"
             >
               <MailIcon className="size-4" />
               {dict.cta_email}
             </a>
             <a
-              href={linkedinUrl}
+              href={CONTACT_LINKS.linkedin.href}
               target="_blank"
               rel="noopener noreferrer"
               className="ui-button ui-button-secondary rounded-full gap-2 px-4 py-2 text-small"
             >
               <LinkedInIcon className="size-4" />
               {dict.cta_linkedin}
+            </a>
+            <a
+              href={CONTACT_LINKS.whatsapp.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ui-button ui-button-secondary rounded-full gap-2 px-4 py-2 text-small"
+              aria-label={`${dict.whatsapp}: ${CONTACT_LINKS.whatsapp.number}`}
+            >
+              <WhatsAppIcon className="size-4" />
+              <span>{dict.whatsapp}</span>
+              <span className="font-mono text-caption text-text-secondary">
+                {CONTACT_LINKS.whatsapp.number}
+              </span>
             </a>
           </div>
         </div>

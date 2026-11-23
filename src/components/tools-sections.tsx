@@ -1,3 +1,5 @@
+import { TechnologyIcon } from '@/components/icons';
+
 interface ExpertiseCategory {
   id: string;
   name: string;
@@ -49,8 +51,9 @@ const ExpertiseSection = ({ dict }: ExpertiseSectionProps) => {
                 {category.items.map((item) => (
                   <li
                     key={item}
-                    className="ui-badge rounded-full px-2.5 py-1 font-mono text-caption"
+                    className="ui-badge rounded-full gap-1.5 px-2.5 py-1 font-mono text-caption"
                   >
+                    <TechnologyIcon name={item} />
                     {item}
                   </li>
                 ))}

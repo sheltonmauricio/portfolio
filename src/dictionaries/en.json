@@ -27,11 +27,11 @@
     "focus": [
       {
         "label": "Applications",
-        "value": "Web and desktop"
+        "value": "Web, Desktop and Mobile"
       },
       {
         "label": "Backend",
-        "value": "REST APIs and relational data"
+        "value": "REST APIs and Relational Data Base"
       },
       {
         "label": "Complementary interests",
@@ -157,7 +157,8 @@
         ],
         "live_demo_url": null,
         "repository_url": null,
-        "achievement": null
+        "achievement": null,
+        "repository_links": []
       },
       {
         "id": "lava-ja",
@@ -175,7 +176,8 @@
         ],
         "live_demo_url": null,
         "repository_url": null,
-        "achievement": "3rd Place — Moza xLab × UEM Hackathon"
+        "achievement": "3rd Place — Moza xLab × UEM Hackathon",
+        "repository_links": []
       },
       {
         "id": "sockethub",
@@ -194,7 +196,21 @@
         ],
         "live_demo_url": null,
         "repository_url": null,
-        "achievement": null
+        "achievement": null,
+        "repository_links": [
+          {
+            "id": "backend",
+            "url": "https://github.com/sheltonmauricio/sockethub-backend"
+          },
+          {
+            "id": "web_client",
+            "url": "https://github.com/sheltonmauricio/sockethub-frontend-web"
+          },
+          {
+            "id": "desktop_client",
+            "url": "https://github.com/sheltonmauricio/sockethub-frontend"
+          }
+        ]
       },
       {
         "id": "medisync",
@@ -213,7 +229,17 @@
         ],
         "live_demo_url": null,
         "repository_url": null,
-        "achievement": null
+        "achievement": null,
+        "repository_links": [
+          {
+            "id": "server",
+            "url": "https://github.com/sheltonmauricio/medisync-corba-server"
+          },
+          {
+            "id": "client",
+            "url": "https://github.com/sheltonmauricio/medisync-corba-client"
+          }
+        ]
       },
       {
         "id": "eduacademy",
@@ -226,16 +252,25 @@
           "TypeScript",
           "Tailwind CSS"
         ],
-        "live_demo_url": null,
+        "live_demo_url": "https://eduacademymz.github.io/page",
         "repository_url": null,
-        "achievement": null
+        "achievement": null,
+        "repository_links": []
       }
     ],
     "carousel_label": "Selected projects",
     "previous": "Previous projects",
     "next": "Next projects",
     "live_demo": "Live Demo",
-    "repository": "Repository"
+    "repository": "Repository",
+    "repository_action": "Repositories",
+    "repository_labels": {
+      "backend": "Backend",
+      "web_client": "Web Client",
+      "desktop_client": "Desktop Client",
+      "server": "Server",
+      "client": "Client"
+    }
   },
   "education": {
     "eyebrow": "Education and credentials",
@@ -271,9 +306,10 @@
   "contact": {
     "eyebrow": "Contact",
     "title": "Get in touch",
-    "subtitle": "For questions about my work or technical conversations, contact me by email or connect on LinkedIn.",
+    "subtitle": "For questions about my work or technical conversations, reach me by email, LinkedIn, or WhatsApp.",
     "cta_email": "Send an email",
-    "cta_linkedin": "Connect on LinkedIn"
+    "cta_linkedin": "Connect on LinkedIn",
+    "whatsapp": "WhatsApp"
   },
   "footer": {
     "copyright": "© {year} Shelton Maurício",
@@ -283,6 +319,7 @@
     "navigation_label": "Navigation",
     "linkedin": "LinkedIn",
     "email": "Email",
-    "back_to_top": "Back to top"
+    "back_to_top": "Back to top",
+    "whatsapp": "WhatsApp"
   }
 }

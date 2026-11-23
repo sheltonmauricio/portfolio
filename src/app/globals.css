@@ -353,6 +353,55 @@
     color: var(--warning);
   }
 
+  .technology-icon {
+    width: 1rem;
+    height: 1rem;
+    flex: none;
+    color: var(--accent-hover);
+  }
+
+  .technology-icon-mark {
+    display: inline-grid;
+    place-items: center;
+    font-family: var(--font-mono-stack);
+    font-size: 0.55rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    line-height: 1;
+  }
+
+  .project-repositories > summary {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  .project-repositories > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .project-repository-links {
+    display: grid;
+    gap: var(--space-1);
+    margin-top: var(--space-2);
+    border-left: 1px solid var(--border-default);
+    padding-left: var(--space-2);
+  }
+
+  .project-repository-links a {
+    display: flex;
+    min-height: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    color: var(--text-secondary);
+    font-size: var(--text-caption);
+    transition: color 150ms ease;
+  }
+
+  .project-repository-links a:hover {
+    color: var(--text-primary);
+  }
+
   .ui-button:disabled,
   .ui-button[aria-disabled="true"] {
     cursor: not-allowed;

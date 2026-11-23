@@ -8,7 +8,13 @@ interface ProjectItem {
   technologies: string[];
   live_demo_url: string | null;
   repository_url: string | null;
+  repository_links: RepositoryLink[];
   achievement: string | null;
+}
+
+interface RepositoryLink {
+  id: string;
+  url: string;
 }
 
 interface ProjectsSectionProps {
@@ -21,6 +27,8 @@ interface ProjectsSectionProps {
     next: string;
     live_demo: string;
     repository: string;
+    repository_action: string;
+    repository_labels: Record<string, string>;
     items: ProjectItem[];
   };
 }
@@ -123,17 +131,50 @@ const ProjectsSection = ({ dict }: ProjectsSectionProps) => {
                       </li>
                     ))}
                   </ul>
-                  <div className="mt-3 flex flex-wrap gap-2 border-t border-border-subtle pt-3">
+                  <div className="mt-3 flex flex-wrap items-start gap-2 border-t border-border-subtle pt-3">
                     <ProjectAction
                       href={project.live_demo_url}
                       label={dict.live_demo}
                       kind="demo"
                     />
-                    <ProjectAction
-                      href={project.repository_url}
-                      label={dict.repository}
-                      kind="repository"
-                    />
+                    {project.repository_links.length > 0 ? (
+                      <details className="project-repositories">
+                        <summary
+                          aria-controls={`project-repositories-${project.id}`}
+                          className="ui-button ui-button-secondary project-action rounded-full gap-1.5 px-2.5 py-1 text-caption"
+                        >
+                          <GitHubIcon className="size-3.5" />
+                          <span>{dict.repository_action}</span>
+                          <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" className="size-3">
+                            <path d="m5 7.5 5 5 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                          </svg>
+                        </summary>
+                        <ul
+                          id={`project-repositories-${project.id}`}
+                          aria-label={`${project.title}: ${dict.repository_action}`}
+                          className="project-repository-links"
+                        >
+                          {project.repository_links.map((repository) => (
+                            <li key={repository.id}>
+                              <a
+                                href={repository.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <span>{dict.repository_labels[repository.id] ?? repository.id}</span>
+                                <ExternalLinkIcon className="size-3" />
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </details>
+                    ) : (
+                      <ProjectAction
+                        href={project.repository_url}
+                        label={dict.repository}
+                        kind="repository"
+                      />
+                    )}
                   </div>
                 </article>
               </li>

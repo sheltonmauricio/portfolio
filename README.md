@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shelton Maurício — Portfolio
+
+## Project Overview
+
+A personal portfolio for Shelton Maurício, a Software Developer and fourth-year Computer Engineering student at Universidade Eduardo Mondlane (UEM). It presents selected projects, technical interests, education, and ways to get in touch.
+
+## Features
+
+- English and Portuguese portfolio pages.
+- Responsive navigation and homepage sections.
+- Horizontal selected-project carousel with repository and live-demo actions where destinations are available.
+- About, technical expertise, education, certifications, and language information.
+- Contact links for email, LinkedIn, and WhatsApp.
+- Dark-first design tokens, keyboard focus styles, and reduced-motion support.
+- Static export for GitHub Pages.
+
+## Tech Stack
+
+- Next.js 16 (App Router and static export)
+- React 19
+- TypeScript
+- Tailwind CSS 4 with CSS-first theme tokens
+- ESLint 9 with `eslint-config-next`
+- PostCSS with `@tailwindcss/postcss`
+- GitHub Actions and GitHub Pages for deployment
+
+## Project Structure
+
+```text
+portfolio/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
+├── public/
+│   ├── cv.pdf
+│   └── index.html
+├── src/
+│   ├── app/
+│   │   ├── [lang]/page.tsx
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   ├── components/
+│   ├── dictionaries/
+│   │   ├── en.json
+│   │   ├── pt.json
+│   │   └── get-dictionary.ts
+│   └── lib/
+│       └── contact-links.ts
+├── next.config.ts
+├── package.json
+└── postcss.config.mjs
+```
 
 ## Getting Started
 
-First, run the development server:
+The deployment workflow uses Node.js 22. Use Node.js 22 and npm for local development.
 
 ```bash
+git clone https://github.com/sheltonmauricio/portfolio.git
+cd portfolio
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000). The root route selects `/pt` or `/en` based on the browser language; both localized routes can also be opened directly.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Starts the Next.js development server. |
+| `npm run build` | Builds the site and creates the static export in `out/`. |
+| `npm run start` | Runs the `next start` command defined in `package.json`. The GitHub Pages deployment serves the static export instead. |
+| `npm run lint` | Runs ESLint across the repository. |
 
-## Learn More
+## Internationalization
 
-To learn more about Next.js, take a look at the following resources:
+The localized pages are `/en` and `/pt`, generated from the `[lang]` route. Page content and metadata are stored in `src/dictionaries/en.json` and `src/dictionaries/pt.json`; `src/dictionaries/get-dictionary.ts` loads the selected dictionary on the server. The navigation includes a language switcher for these routes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+GitHub Pages deployment is configured through [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). The workflow runs on pushes to `main` and supports manual dispatch. It installs dependencies with `npm ci`, runs the production build, checks the `out/` export, uploads the artifact, and deploys it to Pages.
 
-## Deploy on Vercel
+`next.config.ts` sets `output: 'export'` and disables image optimization for static hosting. In production, it configures `/portfolio` as the base path and asset prefix used by this repository's GitHub Pages deployment.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Architecture and Design
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The localized App Router page composes small presentation components and supplies content from the server-loaded dictionaries. Interactive behavior is kept in focused client components, including the language switcher, mobile navigation, and carousel controls.
+
+Global design tokens and component styles live in `src/app/globals.css` and use Tailwind CSS 4's CSS-first configuration. Shared content wrappers, responsive grids, compact surfaces, semantic markup, visible focus styles, and reduced-motion handling support the desktop and mobile layouts.
+
+## Author
+
+**Shelton Maurício** — Software Developer and Computer Engineering student at Universidade Eduardo Mondlane (UEM).
+
+- [GitHub](https://github.com/sheltonmauricio)
+- [LinkedIn](https://www.linkedin.com/in/sheltonmauricio)
+- [Email](mailto:shelton.mauricio.m@gmail.com)
+- [WhatsApp](https://wa.me/258872435087) — +258 872 435 087
